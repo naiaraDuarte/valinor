@@ -244,10 +244,11 @@ Gostariamos de entender como você pensa e as decisões que você tomou durante 
   conhecido por ser uma escolha sólida para projetos de grande escala e complexidade.
 
 - Quais princípios da engenharia de software que você usou?
-  Separation of Concerns: Onde dividi o sistema em componentes e modulos cada qual com as devidas responsabilidades, facilitando a manutenção e evolução do software.
-  Decoupling: Componentes independentes que se comunicam por meio das interfaces como a Repositories, facilitando a substituição de componentes e a integração com outros       sistemas.
-  Keep It Simple (KISS): Busquei uma solução simples, sendo mais fácil de entender, testar e manter.
-  Testabilidade: Busquei testar o maximo com testes eficazes que verificam o comportamento correto do sistema (e2e e testes unitários);
+
+  - Separation of Concerns: Onde dividi o sistema em componentes e modulos cada qual com as devidas responsabilidades, facilitando a manutenção e evolução do software.
+  - Decoupling: Componentes independentes que se comunicam por meio das interfaces como a Repositories, facilitando a substituição de componentes e a integração com outros       sistemas.
+  - Keep It Simple (KISS): Busquei uma solução simples, sendo mais fácil de entender, testar e manter.
+  - Testabilidade: Busquei testar o maximo com testes eficazes que verificam o comportamento correto do sistema (e2e e testes unitários);
 
 - Desafios e problemas que você enfrentou e como você resolveu
    - Como não foi definido a arquitetura de pastas e padrão a ser utilizado no projeto, utilizei uma abordagem que eu costumo adotar nos meus projetos.
