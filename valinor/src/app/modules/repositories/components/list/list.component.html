@@ -1,0 +1,44 @@
+<div class="repository">
+    <div class="repository__title">
+        <a [href]="repository?.html_url" target="_blank" class="repository__name">
+            <strong>{{ repository?.name }}</strong>
+        </a>
+        <div class="repository__owner">
+            <img [src]="repository?.owner?.avatar_url" alt="avatar" class="repository__owner-avatar">
+            <span class="repository__owner-login">{{ repository?.owner?.login }}</span>
+        </div>
+    </div>
+
+    <div class="details">
+        <div class="details__content">
+            <div *ngIf="repository?.language" class="details__content-attribute">
+                <span class="material-icons icon">science</span>
+                {{ repository?.language }}
+            </div>
+    
+            <div class="details__content-attribute">
+                <span class="material-icons icon">lock</span>
+                {{ repository?.private ? 'Privado' : 'Público' }}
+            </div>
+    
+            <div class="details__content-attribute">
+                <span class="material-icons icon">fork_right</span>
+                {{ repository?.forks }}
+            </div>
+    
+            <div class="details__content-attribute">
+                <span class="material-icons icon">visibility</span>
+                {{ repository?.watchers }}
+            </div>
+    
+            <div class="details__content-attribute">
+                <span class="material-icons icon">star</span>
+                {{ repository?.stargazers_count }}
+            </div>
+        </div>
+    
+        <div>
+            <p class="details__description" truncateText>{{ repository?.description }}</p>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,116 @@
+@import '@angular/material/theming';
+
+@include mat-core();
+
+$md-theme-green: (
+    50 : #eff0ed,
+    100 : #d7dbd3,
+    200 : #bcc3b5,
+    300 : #a1aa97,
+    400 : #8c9881,
+    500 : #78866b,
+    600 : #707e63,
+    700 : #657358,
+    800 : #5b694e,
+    900 : #48563c,
+    A100 : #d3ffad,
+    A200 : #b8ff7a,
+    A400 : #9cff47,
+    A700 : #8eff2e,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+$grey-palette: (
+  50: #fafafa,
+  100: #f5f5f5,
+  200: #eeeeee,
+  300: #e0e0e0,
+  400: #bdbdbd,
+  500: #9e9e9e,
+  600: #757575,
+  700: #616161,
+  800: #424242,
+  900: #212121,
+  A100: #ffffff,
+  A200: #eeeeee,
+  A400: #bdbdbd,
+  A700: #616161,
+  contrast: (
+    50: $dark-primary-text,
+    100: $dark-primary-text,
+    200: $dark-primary-text,
+    300: $dark-primary-text,
+    400: $dark-primary-text,
+    500: $dark-primary-text,
+    600: $light-primary-text,
+    700: $light-primary-text,
+    800: $light-primary-text,
+    900: $light-primary-text,
+    A100: $dark-primary-text,
+    A200: $dark-primary-text,
+    A400: $dark-primary-text,
+    A700: $light-primary-text,
+  )
+);
+
+$red-palette: (
+  50: #ffebee,
+  100: #ffcdd2,
+  200: #ef9a9a,
+  300: #e57373,
+  400: #ef5350,
+  500: #f44336,
+  600: #e53935,
+  700: #d32f2f,
+  800: #c62828,
+  900: #b71c1c,
+  A100: #ff8a80,
+  A200: #ff5252,
+  A400: #ff1744,
+  A700: #d50000,
+  contrast: (
+    50: $dark-primary-text,
+    100: $dark-primary-text,
+    200: $dark-primary-text,
+    300: $dark-primary-text,
+    400: $dark-primary-text,
+    500: $light-primary-text,
+    600: $light-primary-text,
+    700: $light-primary-text,
+    800: $light-primary-text,
+    900: $light-primary-text,
+    A100: $dark-primary-text,
+    A200: $light-primary-text,
+    A400: $light-primary-text,
+    A700: $light-primary-text,
+  )
+);
+
+$precursor-frontend-primary: mat-palette($md-theme-green, 500);
+$precursor-frontend-accent: mat-palette($grey-palette, A100);
+$precursor-frontend-warn: mat-palette($red-palette);
+
+$precursor-frontend-theme: mat-light-theme((
+  color: (
+    primary: $precursor-frontend-primary,
+    accent: $precursor-frontend-accent,
+    warn: $precursor-frontend-warn,
+  )
+));
+
+@include angular-material-theme($precursor-frontend-theme);

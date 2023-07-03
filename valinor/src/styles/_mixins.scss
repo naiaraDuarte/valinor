@@ -1,0 +1,15 @@
+$sm: 480px;
+$md: 768px;
+$lg: 1200px;
+
+@mixin desktop-first($size) {
+    @media (max-width: $size) {
+      @content;
+    }
+  }
+  
+@mixin mobile-first($size) {
+    @media (min-width: $size) {
+      @content;
+    }
+}

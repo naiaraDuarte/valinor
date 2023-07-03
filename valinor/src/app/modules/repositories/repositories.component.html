@@ -1,0 +1,27 @@
+<div>
+    <span class="title">Valinor - GitHub Repositories</span>
+    <form [formGroup]="searchForm" class="search-form">
+      <mat-form-field class="input-field">
+        <mat-label>Repositório</mat-label>
+        <input matInput id="input-field" placeholder="Digite o repositório" formControlName="name">
+        <button id="close-button" *ngIf="nameInput?.value" matSuffix mat-icon-button aria-label="Clear" (click)="clear()">
+          <mat-icon>close</mat-icon>
+        </button>
+      </mat-form-field>
+      <mat-paginator
+        [length]="totalResults"
+        [pageSize]="10"
+        [pageSizeOptions]="[5, 10, 25]"
+        (page)="onPageChange($event)">
+      </mat-paginator>
+    </form>
+  
+    <div id="content" class="content" *ngIf="repositories">
+      <div class="repository" *ngFor="let repository of repositories">
+        <app-list [repository]="repository"></app-list>
+      </div>
+    </div>
+    <div class="content empty-state" *ngIf="!repositories || repositories?.length == 0">
+      <app-search-not-found [errorSearch]="nameInput?.value"></app-search-not-found>
+    </div>
+</div>

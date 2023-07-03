@@ -231,8 +231,30 @@ Você deve enviar a resolução do desafio via pull request nesse mesmo reposit�
 
 Gostariamos de entender como você pensa e as decisões que você tomou durante o desenvolvimento. Então, quando for enviar seu pull request, por favor responda:
 
-- Qual ferramentas e bibliotecas (libraries, framework, tools etc) você usou
-- Porque você optou pela tecnologia X e não a Y
+- Qual ferramentas e bibliotecas (libraries, framework, tools etc) você usou?
+  - Visual Studio Code;
+  - Angular + TypeScript;
+  - Angular material + Google icons;
+  - Padrão BEM no scss;
+  - Principios de SOLID e Clean Code; 
+  - Cypress;
+
+- Porque você optou pela tecnologia X e não a Y?
+  - A minha linguagem de dominio é o angular, além do mesmo ser facilmente escalavel e 
+  conhecido por ser uma escolha sólida para projetos de grande escala e complexidade.
+
 - Quais princípios da engenharia de software que você usou?
+  Separation of Concerns: Onde dividi o sistema em componentes e modulos cada qual com as devidas responsabilidades, facilitando a manutenção e evolução do software.
+  Decoupling: Componentes independentes que se comunicam por meio das interfaces como a Repositories, facilitando a substituição de componentes e a integração com outros       sistemas.
+  Keep It Simple (KISS): Busquei uma solução simples, sendo mais fácil de entender, testar e manter.
+  Testabilidade: Busquei testar o maximo com testes eficazes que verificam o comportamento correto do sistema (e2e e testes unitários);
+
 - Desafios e problemas que você enfrentou e como você resolveu
+   - Como não foi definido a arquitetura de pastas e padrão a ser utilizado no projeto, utilizei uma abordagem que eu costumo adotar nos meus projetos.
+
+  - Em caso de escalar o projeto, criaria adicionalmente as estruturas de Guards, Interceptors, Auth e etc..
+
 - O que você entende que pode ser melhorado e como fazer isso
+  - Inclusão de guards e configuração do interceptor. 
+  - Configuração padrão de exceções no Interceptor
+  - Inclusão de toast/snackbar para apresentação dos erros

@@ -1,0 +1,15 @@
+.not-found {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+
+    img {
+        width: 200px;
+    }
+
+    span {
+        text-align: center;
+    }
+}
